@@ -489,14 +489,14 @@ spec:
         - ""
         - --appendonly
         - "no"
-        image: redis:6.2.4-alpine
+        image: 'image-registry.apps.silver.devops.gov.bc.ca/3cd915-tools/redis:6.2.4-alpine'
         imagePullPolicy: Always
         name: redis
         ports:
         - containerPort: 6379
       securityContext:
         runAsNonRoot: true
-        runAsUser: 999
+        runAsUser: 1005540210
       serviceAccountName: argocd-redis
 ---
 apiVersion: apps/v1
